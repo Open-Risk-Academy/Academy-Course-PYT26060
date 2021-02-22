@@ -1,0 +1,646 @@
+{
+    "@context": {
+        "@cro": "https://www.openriskmanual.org/ns/cro/",
+        "@language": "en",
+        "@owl": "http://www.w3.org/2002/07/owl#",
+        "@rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "@rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "@xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "@cro:has_webpage",
+            "@rdfs:comment": {
+                "@value": "An online webpage describing the credit rating agency"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingAgency"
+            },
+            "@rdfs:range": {
+                "@id": "@xsd:anyURI"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "@cro:has_subsidiary_policy",
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingMethodology"
+            },
+            "@rdfs:range": {
+                "@id": "@xsd:string"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "http://purl.org/dc/elements/1.1/rights",
+            "@type": "@owl:AnnotationProperty"
+        },
+        {
+            "@id": "@cro:has_solicitation_policy",
+            "@rdfs:comment": {
+                "@value": "Whether the agency business model includes unsolicited (by the borrower) ratings"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:BusinessModel"
+            },
+            "@rdfs:range": {
+                "@id": "_:Naed9ff0a9df7456fb73ae47b3f5b7900"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "_:Naed9ff0a9df7456fb73ae47b3f5b7900",
+            "@owl:oneOf": {
+                "@list": [
+                    {
+                        "@value": "Solicited and Unsolicited"
+                    },
+                    {
+                        "@value": "Solicited only"
+                    }
+                ]
+            },
+            "@type": "@rdfs:Datatype"
+        },
+        {
+            "@id": "@cro:belongs_to_rating_system",
+            "@rdfs:comment": {
+                "@value": "The credit rating system to which a credit rating scale belongs"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingScale"
+            },
+            "@rdfs:range": {
+                "@id": "@cro:CreditRatingSystem"
+            },
+            "@type": "@owl:ObjectProperty"
+        },
+        {
+            "@id": "@cro:has_methodology_url",
+            "@rdfs:comment": {
+                "@value": "An online description of credit rating methodology"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingMethodology"
+            },
+            "@rdfs:range": {
+                "@id": "@xsd:anyURI"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "@cro:has_business_model",
+            "@rdfs:comment": {
+                "@value": "The business model of a rating agency"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingAgency"
+            },
+            "@rdfs:range": {
+                "@id": "@cro:BusinessModel"
+            },
+            "@type": "@owl:ObjectProperty"
+        },
+        {
+            "@id": "@cro:MarketSegment",
+            "@rdfs:comment": {
+                "@value": "The credit market segment in which a credit rating agency is active (can be multiple)"
+            },
+            "@rdfs:isDefinedBy": {
+                "@id": "https://www.openriskmanual.org/ns/cro.owl"
+            },
+            "@rdfs:label": {
+                "@value": "MarketSegment"
+            },
+            "@rdfs:seeAlso": {
+                "@id": "https://www.openriskmanual.org/wiki/Credit_Rating_Agency"
+            },
+            "@type": "@owl:Class"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/license",
+            "@type": "@owl:AnnotationProperty"
+        },
+        {
+            "@id": "@cro:has_origination_type",
+            "@rdfs:comment": {
+                "@value": "Whether a rating has been produced internally be an institution or sourced externally by an agency"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRating"
+            },
+            "@rdfs:range": {
+                "@id": "_:Nca9c6099f3864bb69ed4831998546293"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "_:Nca9c6099f3864bb69ed4831998546293",
+            "@owl:oneOf": {
+                "@list": [
+                    {
+                        "@value": "External"
+                    },
+                    {
+                        "@value": "Internal"
+                    }
+                ]
+            },
+            "@type": "@rdfs:Datatype"
+        },
+        {
+            "@id": "@cro:is_part_of_rating_scale",
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRating"
+            },
+            "@rdfs:range": {
+                "@id": "@cro:CreditRatingScale"
+            },
+            "@type": "@owl:ObjectProperty"
+        },
+        {
+            "@id": "@cro:has_temporal_type",
+            "@rdfs:comment": {
+                "@value": "The temporal currency of a rating (current versus historical)"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRating"
+            },
+            "@rdfs:range": {
+                "@id": "_:Nd68776fa6ffd41fabd62aa200b2c6dc1"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "_:Nd68776fa6ffd41fabd62aa200b2c6dc1",
+            "@owl:oneOf": {
+                "@list": [
+                    {
+                        "@value": "Current"
+                    },
+                    {
+                        "@value": "Initial"
+                    }
+                ]
+            },
+            "@type": "@rdfs:Datatype"
+        },
+        {
+            "@id": "@cro:CreditRatingModel",
+            "@rdfs:comment": [
+                {
+                    "@value": "In future revisions credit risk models will be linked with the risk model ontology"
+                },
+                {
+                    "@value": "A concrete credit rating model (defined analytical process, including possible qualitative aspects)"
+                }
+            ],
+            "@rdfs:isDefinedBy": {
+                "@id": "https://www.openriskmanual.org/ns/cro.owl"
+            },
+            "@rdfs:label": {
+                "@value": "CreditRatingModel"
+            },
+            "@rdfs:seeAlso": {
+                "@id": "https://www.openriskmanual.org/wiki/Credit_Rating_Model"
+            },
+            "@type": "@owl:Class"
+        },
+        {
+            "@id": "@cro:has_agency_description",
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingAgency"
+            },
+            "@rdfs:range": {
+                "@id": "@xsd:string"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "@cro:has_payment_profile",
+            "@rdfs:comment": {
+                "@value": "The payment business model of rating agency (who pays)"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:BusinessModel"
+            },
+            "@rdfs:range": {
+                "@id": "_:N1e237b3fcaf5480488067d24142de1c1"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "_:N1e237b3fcaf5480488067d24142de1c1",
+            "@owl:oneOf": {
+                "@list": [
+                    {
+                        "@value": "Investor pays"
+                    },
+                    {
+                        "@value": "Issuer pays"
+                    }
+                ]
+            },
+            "@type": "@rdfs:Datatype"
+        },
+        {
+            "@id": "http://purl.org/dc/elements/1.1/creator",
+            "@type": "@owl:AnnotationProperty"
+        },
+        {
+            "@id": "@cro:has_CQS_mapping",
+            "@rdfs:comment": {
+                "@value": "The mapping of a rating scale to the CQS system"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingScale"
+            },
+            "@rdfs:range": {
+                "@id": "@xsd:boolean"
+            },
+            "@rdfs:seeAlso": {
+                "@id": "https://www.openriskmanual.org/wiki/Credit_Quality_Step"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/contributor",
+            "@type": "@owl:AnnotationProperty"
+        },
+        {
+            "@id": "@cro:CreditRatingSystem",
+            "@rdfs:comment": {
+                "@value": "All concrete components (models, scales) that are used by a credit rating agency to produce a credit rating"
+            },
+            "@rdfs:isDefinedBy": {
+                "@id": "https://www.openriskmanual.org/ns/cro.owl"
+            },
+            "@rdfs:label": {
+                "@value": "CreditRatingSystem"
+            },
+            "@rdfs:seeAlso": {
+                "@id": "https://www.openriskmanual.org/wiki/Credit_Rating_System"
+            },
+            "@type": "@owl:Class"
+        },
+        {
+            "@id": "@cro:BusinessModel",
+            "@rdfs:comment": {
+                "@value": "The core (rating specific) business model choices adopted by a rating agency"
+            },
+            "@rdfs:isDefinedBy": {
+                "@id": "https://www.openriskmanual.org/ns/cro.owl"
+            },
+            "@rdfs:label": {
+                "@value": "BusinessModel"
+            },
+            "@rdfs:seeAlso": {
+                "@id": "https://www.openriskmanual.org/wiki/Credit_Rating_Agency"
+            },
+            "@type": "@owl:Class"
+        },
+        {
+            "@id": "@cro:has_legal_entity_type",
+            "@rdfs:comment": {
+                "@value": "Whether the rating concerns an issuer (legal entity) or an instrument (debt security)"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRating"
+            },
+            "@rdfs:range": {
+                "@id": "_:N608aa94fcedb47f4ab1b34ef995de40e"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "_:N608aa94fcedb47f4ab1b34ef995de40e",
+            "@owl:oneOf": {
+                "@list": [
+                    {
+                        "@value": "Instrument Rating"
+                    },
+                    {
+                        "@value": "Issuer Rating"
+                    }
+                ]
+            },
+            "@type": "@rdfs:Datatype"
+        },
+        {
+            "@id": "@cro:",
+            "@owl:versionIRI": {
+                "@id": "@cro:0.1"
+            },
+            "@owl:versionInfo": {
+                "@value": "0.1.0"
+            },
+            "@rdfs:comment": {
+                "@value": "The elements of the CRO ontology are annotated in more detail in the Open Risk Manual under the Credit Ratings Ontology category."
+            },
+            "@rdfs:isDefinedBy": {
+                "@id": "https://www.openriskmanual.org/ns/cro.owl"
+            },
+            "@rdfs:seeAlso": {
+                "@value": "https://www.openriskmanual.org/wiki/Credit_Ratings_Ontology"
+            },
+            "@type": "@owl:Ontology",
+            "http://purl.org/dc/elements/1.1/abstract": {
+                "@value": "The Credit Ratings Ontology (CRO), described using W3C RDF Schema and the Web Ontology Language OWL.\n\nCRO aims to capture the core concepts involved in the production of credit ratings thereby aiding the more systematic processing of credit data.\n\nRelease Notes:\n- Version 0.1 Initial Release. Defines the main classes, object and data properties of the ontology"
+            },
+            "http://purl.org/dc/elements/1.1/creator": {
+                "@value": "Open Risk"
+            },
+            "http://purl.org/dc/elements/1.1/description": {
+                "@value": "The Credit Ratings Ontology (CRO), described using W3C RDF Schema and the Web Ontology Language OWL.\n\nCRO aims to capture the core concepts involved in the production of credit ratings thereby aiding the more systematic processing of credit data.\n\nRelease Notes:\n- Version 0.1 Initial Release. Defines the main classes, object and data properties of the ontology\n"
+            },
+            "http://purl.org/dc/elements/1.1/format": {
+                "@value": "application/rdf+xml"
+            },
+            "http://purl.org/dc/elements/1.1/rights": {
+                "@value": "Copyright © 2021 Open Risk"
+            },
+            "http://purl.org/dc/elements/1.1/title": {
+                "@value": "CRO, A credit ratings ontology"
+            },
+            "http://purl.org/dc/terms/contributor": {
+                "@value": "We welcome contributors to the Credit Ratings Ontology!"
+            },
+            "http://purl.org/dc/terms/license": {
+                "@value": "Creative Commons Attribution 3.0 (CC BY 3.0)"
+            }
+        },
+        {
+            "@id": "http://purl.org/dc/elements/1.1/abstract",
+            "@type": "@owl:AnnotationProperty"
+        },
+        {
+            "@id": "@cro:has_parent_description",
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingAgency"
+            },
+            "@rdfs:range": {
+                "@id": "@xsd:string"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "@cro:has_information_model",
+            "@rdfs:comment": {
+                "@value": "Whether the agency uses private information in the formation of ratings"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:BusinessModel"
+            },
+            "@rdfs:range": {
+                "@id": "_:N0af6cc93abaf4a6c9ed8402ffa75c2b8"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "_:N0af6cc93abaf4a6c9ed8402ffa75c2b8",
+            "@owl:oneOf": {
+                "@list": [
+                    {
+                        "@value": "Public and Private"
+                    },
+                    {
+                        "@value": "Public only"
+                    }
+                ]
+            },
+            "@type": "@rdfs:Datatype"
+        },
+        {
+            "@id": "@cro:has_default_definition",
+            "@rdfs:comment": {
+                "@value": "The default definition as disclosed"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingMethodology"
+            },
+            "@rdfs:range": {
+                "@id": "@xsd:string"
+            },
+            "@rdfs:seeAlso": {
+                "@id": "https://www.openriskmanual.org/wiki/Default_Definition"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "@cro:has_market_segment",
+            "@rdfs:comment": {
+                "@value": "The market segment of a rating agency"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingAgency"
+            },
+            "@rdfs:range": {
+                "@id": "@cro:MarketSegment"
+            },
+            "@type": "@owl:ObjectProperty"
+        },
+        {
+            "@id": "@cro:is_part_or_rating_system",
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingMethodology"
+            },
+            "@rdfs:range": {
+                "@id": "@cro:CreditRatingSystem"
+            },
+            "@type": "@owl:ObjectProperty"
+        },
+        {
+            "@id": "@cro:has_profit_profile",
+            "@rdfs:comment": {
+                "@value": "Whether a rating agency is for-profit or non-profit"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:BusinessModel"
+            },
+            "@rdfs:range": {
+                "@id": "_:Ne20168db49194b9086585aa27d07f960"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "_:Ne20168db49194b9086585aa27d07f960",
+            "@owl:oneOf": {
+                "@list": [
+                    {
+                        "@value": "For-profit"
+                    },
+                    {
+                        "@value": "Non-profit"
+                    }
+                ]
+            },
+            "@type": "@rdfs:Datatype"
+        },
+        {
+            "@id": "@cro:has_ESMA_id",
+            "@rdfs:comment": {
+                "@value": "The ESMA ID of an agency (EU only)"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingAgency"
+            },
+            "@rdfs:range": {
+                "@id": "@xsd:string"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "@cro:CreditRatingAgency",
+            "@rdfs:comment": {
+                "@value": "The core Credit Rating Agency Class representing an entity issuing credit ratings"
+            },
+            "@rdfs:isDefinedBy": {
+                "@id": "https://www.openriskmanual.org/ns/cro.owl"
+            },
+            "@rdfs:label": {
+                "@value": "CreditRatingAgency"
+            },
+            "@rdfs:seeAlso": {
+                "@id": "https://www.openriskmanual.org/wiki/Credit_Rating_Agency"
+            },
+            "@type": "@owl:Class"
+        },
+        {
+            "@id": "http://purl.org/dc/elements/1.1/description",
+            "@type": "@owl:AnnotationProperty"
+        },
+        {
+            "@id": "@cro:CreditRatingMethodology",
+            "@rdfs:comment": {
+                "@value": "The credit rating methodology adopted by a rating agency (can be multiple)"
+            },
+            "@rdfs:isDefinedBy": {
+                "@id": "https://www.openriskmanual.org/ns/cro.owl"
+            },
+            "@rdfs:label": {
+                "@value": "CreditRatingMethodology"
+            },
+            "@rdfs:seeAlso": {
+                "@id": "@cro:Credit%20Rating%20Methodology"
+            },
+            "@type": "@owl:Class"
+        },
+        {
+            "@id": "@cro:CreditRatingScale",
+            "@rdfs:comment": {
+                "@value": "The set of labels, grades over which a credit rating may range"
+            },
+            "@rdfs:isDefinedBy": {
+                "@id": "https://www.openriskmanual.org/ns/cro.owl"
+            },
+            "@rdfs:label": {
+                "@value": "CreditRatingScale"
+            },
+            "@rdfs:seeAlso": {
+                "@id": "https://www.openriskmanual.org/wiki/Credit_Rating_Scale"
+            },
+            "@type": "@owl:Class"
+        },
+        {
+            "@id": "http://purl.org/dc/elements/1.1/format",
+            "@type": "@owl:AnnotationProperty"
+        },
+        {
+            "@id": "@cro:has_risk_horizon",
+            "@rdfs:comment": {
+                "@value": "The temporal risk horizon that is targeted by the credit rating"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRating"
+            },
+            "@rdfs:range": {
+                "@id": "_:Nc2dafea03c3c4a27b078d1af84aa7c30"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "_:Nc2dafea03c3c4a27b078d1af84aa7c30",
+            "@owl:oneOf": {
+                "@list": [
+                    {
+                        "@value": "Long Term"
+                    },
+                    {
+                        "@value": "Short Term"
+                    }
+                ]
+            },
+            "@type": "@rdfs:Datatype"
+        },
+        {
+            "@id": "@cro:CreditRating",
+            "@rdfs:comment": {
+                "@value": "The core credit rating class encapsulating in particular all data elements required to parse credit data"
+            },
+            "@rdfs:isDefinedBy": {
+                "@id": "https://www.openriskmanual.org/ns/cro.owl"
+            },
+            "@rdfs:label": {
+                "@value": "CreditRating"
+            },
+            "@rdfs:seeAlso": {
+                "@id": "https://www.openriskmanual.org/wiki/Credit_Rating"
+            },
+            "@type": "@owl:Class"
+        },
+        {
+            "@id": "http://purl.org/dc/elements/1.1/title",
+            "@type": "@owl:AnnotationProperty"
+        },
+        {
+            "@id": "@cro:has_name",
+            "@rdfs:comment": {
+                "@value": "Agency full name"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingAgency"
+            },
+            "@rdfs:range": {
+                "@id": "@xsd:Name"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "@cro:has_methodology_description",
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRatingMethodology"
+            },
+            "@rdfs:range": {
+                "@id": "@xsd:string"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "@cro:has_risk_assessment_type",
+            "@rdfs:comment": {
+                "@value": "The absolute or relative (to peers) nature of a credit rating"
+            },
+            "@rdfs:domain": {
+                "@id": "@cro:CreditRating"
+            },
+            "@rdfs:range": {
+                "@id": "_:Nba9ab5c5ae6a4d75a65428b1cefa4fde"
+            },
+            "@type": "@owl:DatatypeProperty"
+        },
+        {
+            "@id": "_:Nba9ab5c5ae6a4d75a65428b1cefa4fde",
+            "@owl:oneOf": {
+                "@list": [
+                    {
+                        "@value": "Absolute"
+                    },
+                    {
+                        "@value": "Relative"
+                    }
+                ]
+            },
+            "@type": "@rdfs:Datatype"
+        }
+    ]
+}

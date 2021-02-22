@@ -1,0 +1,603 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.openriskmanual.org/ns/cro/"
+     xml:base="https://www.openriskmanual.org/ns/cro/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://www.openriskmanual.org/ns/cro/">
+        <owl:versionIRI rdf:resource="https://www.openriskmanual.org/ns/cro/0.1"/>
+        <dc:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Credit Ratings Ontology (CRO), described using W3C RDF Schema and the Web Ontology Language OWL.
+
+CRO aims to capture the core concepts involved in the production of credit ratings thereby aiding the more systematic processing of credit data.
+
+Release Notes:
+- Version 0.1 Initial Release. Defines the main classes, object and data properties of the ontology</dc:abstract>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open Risk</dc:creator>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Credit Ratings Ontology (CRO), described using W3C RDF Schema and the Web Ontology Language OWL.
+
+CRO aims to capture the core concepts involved in the production of credit ratings thereby aiding the more systematic processing of credit data.
+
+Release Notes:
+- Version 0.1 Initial Release. Defines the main classes, object and data properties of the ontology
+</dc:description>
+        <dc:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">application/rdf+xml</dc:format>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright © 2021 Open Risk</dc:rights>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CRO, A credit ratings ontology</dc:title>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We welcome contributors to the Credit Ratings Ontology!</terms:contributor>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 (CC BY 3.0)</terms:license>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The elements of the CRO ontology are annotated in more detail in the Open Risk Manual under the Credit Ratings Ontology category.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Credit_Ratings_Ontology</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/belongs_to_rating_system -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/cro/belongs_to_rating_system">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingScale"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingSystem"/>
+        <rdfs:comment>The credit rating system to which a credit rating scale belongs</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_business_model -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_business_model">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingAgency"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/cro/BusinessModel"/>
+        <rdfs:comment>The business model of a rating agency</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_market_segment -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_market_segment">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingAgency"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/cro/MarketSegment"/>
+        <rdfs:comment>The market segment of a rating agency</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/is_part_of_rating_scale -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/cro/is_part_of_rating_scale">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRating"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingScale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/is_part_or_rating_system -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/cro/is_part_or_rating_system">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingMethodology"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_CQS_mapping -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_CQS_mapping">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingScale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>The mapping of a rating scale to the CQS system</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Quality_Step"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_ESMA_id -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_ESMA_id">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingAgency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The ESMA ID of an agency (EU only)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_agency_description -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_agency_description">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingAgency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_default_definition -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_default_definition">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingMethodology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The default definition as disclosed</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Default_Definition"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_information_model -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_information_model">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/BusinessModel"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public and Private</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public only</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Whether the agency uses private information in the formation of ratings</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_legal_entity_type -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_legal_entity_type">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRating"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instrument Rating</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Issuer Rating</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Whether the rating concerns an issuer (legal entity) or an instrument (debt security)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_methodology_description -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_methodology_description">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingMethodology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_methodology_url -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_methodology_url">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingMethodology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>An online description of credit rating methodology</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_name -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_name">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingAgency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+        <rdfs:comment>Agency full name</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_origination_type -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_origination_type">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRating"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">External</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internal</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Whether a rating has been produced internally be an institution or sourced externally by an agency</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_parent_description -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_parent_description">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingAgency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_payment_profile -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_payment_profile">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/BusinessModel"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Investor pays</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Issuer pays</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>The payment business model of rating agency (who pays)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_profit_profile -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_profit_profile">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/BusinessModel"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For-profit</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-profit</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Whether a rating agency is for-profit or non-profit</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_risk_assessment_type -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_risk_assessment_type">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRating"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Absolute</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relative</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>The absolute or relative (to peers) nature of a credit rating</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_risk_horizon -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_risk_horizon">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRating"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Long Term</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Short Term</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>The temporal risk horizon that is targeted by the credit rating</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_solicitation_policy -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_solicitation_policy">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/BusinessModel"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Solicited and Unsolicited</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Solicited only</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Whether the agency business model includes unsolicited (by the borrower) ratings</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_subsidiary_policy -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_subsidiary_policy">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingMethodology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_temporal_type -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_temporal_type">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRating"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Current</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Initial</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>The temporal currency of a rating (current versus historical)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/has_webpage -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/cro/has_webpage">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingAgency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>An online webpage describing the credit rating agency</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/BusinessModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/BusinessModel">
+        <rdfs:comment>The core (rating specific) business model choices adopted by a rating agency</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
+        <rdfs:label>BusinessModel</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_Agency"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/CreditRating -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/CreditRating">
+        <rdfs:comment>The core credit rating class encapsulating in particular all data elements required to parse credit data</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
+        <rdfs:label>CreditRating</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/CreditRatingAgency -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/CreditRatingAgency">
+        <rdfs:comment>The core Credit Rating Agency Class representing an entity issuing credit ratings</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
+        <rdfs:label>CreditRatingAgency</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_Agency"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/CreditRatingMethodology -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/CreditRatingMethodology">
+        <rdfs:comment>The credit rating methodology adopted by a rating agency (can be multiple)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
+        <rdfs:label>CreditRatingMethodology</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_Methodology"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/CreditRatingModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/CreditRatingModel">
+        <rdfs:comment>A concrete credit rating model (defined analytical process, including possible qualitative aspects)</rdfs:comment>
+        <rdfs:comment>In future revisions credit risk models will be linked with the risk model ontology</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
+        <rdfs:label>CreditRatingModel</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_Model"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/CreditRatingScale -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/CreditRatingScale">
+        <rdfs:comment>The set of labels, grades over which a credit rating may range</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
+        <rdfs:label>CreditRatingScale</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_Scale"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/CreditRatingSystem -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/CreditRatingSystem">
+        <rdfs:comment>All concrete components (models, scales) that are used by a credit rating agency to produce a credit rating</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
+        <rdfs:label>CreditRatingSystem</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_System"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/cro/MarketSegment -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/MarketSegment">
+        <rdfs:comment>The credit market segment in which a credit rating agency is active (can be multiple)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
+        <rdfs:label>MarketSegment</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_Agency"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

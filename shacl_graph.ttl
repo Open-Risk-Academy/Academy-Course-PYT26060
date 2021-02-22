@@ -1,0 +1,32 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix cro:   <https://www.openriskmanual.org/ns/cro/> .
+
+cro:ECAIShape
+    a sh:NodeShape ;
+    sh:targetClass cro:CreditRatingAgency ; # Applies to all ECAI
+    sh:property [
+        sh:path cro:has_webpage ;
+        sh:minCount 1 ;
+        sh:datatype <https://www.w3.org/2001/xmlschema#anyURI> ;
+    ] ;
+    sh:property [
+        sh:path cro:has_name ;
+        sh:datatype xsd:string  ;
+    ] ;
+    sh:property [
+        sh:path cro:has_agency_description ;
+        sh:datatype xsd:string  ;
+    ] ;
+    sh:property [
+        sh:path cro:has_methodology_description ;
+        sh:datatype xsd:string  ;
+    ] ;
+    sh:property [
+        sh:path cro:has_methodology_url ;
+        sh:datatype <https://www.w3.org/2001/xmlschema#anyURI> ;
+    ] ;
+    .
