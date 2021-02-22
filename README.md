@@ -1,6 +1,7 @@
 ## Resource Repository for the Open Risk Academy Course PYT 26060
 
-This repo collects resources (data and python scripts) used in the [course PYT26060](https://www.openriskacademy.com/course/view.php?id=60)
+* This repo collects resources (data and python scripts) used in the [course PYT26060](https://www.openriskacademy.com/course/view.php?id=60)
+* It uses the [CRO Ontology Graph](https://www.openriskmanual.org/ns/cro/index-en.html) as the raw material to illustrate a number of Python tools for working with semantic data
 
 ## Scripts
 
