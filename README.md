@@ -35,3 +35,17 @@
 ## DISCLAIMER
 
 * The credit rating agency data sets included in this repo are actual published data obtained from [ESMA](https://www.esma.europa.eu/supervision/credit-rating-agencies/risk). They are only used here for educational purposes.
+
+
+#### Where To Get Help:
+
+If you get stuck on any issue with the course or the Academy:
+
+- If the issue is related to the course topics / material, check in the first instance the Course Forum (Chat)
+- Join the course discussion in the [Open Risk Commons](https://www.openriskcommons.org/t/overview-of-python-semantic-web-tools/62)
+- If the issue is related the operation of the Open Risk Academy check first the Academy FAQ
+- If the issue persists contact us at info at openrisk dot eu
+
+## Academy Course Catalog
+
+* [Course List and Description](https://www.openriskmanagement.com/academy-courses/)
