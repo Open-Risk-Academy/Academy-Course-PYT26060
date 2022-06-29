@@ -1,4 +1,4 @@
-# (c) 2021 Open Risk (https://www.openriskmanagement.com)
+# (c) 2021 - 2022 Open Risk (https://www.openriskmanagement.com)
 
 # filter_rdf_file.py
 import rdflib

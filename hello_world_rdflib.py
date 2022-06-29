@@ -1,4 +1,4 @@
-# (c) 2021 Open Risk (https://www.openriskmanagement.com)
+# (c) 2021 - 2022 Open Risk (https://www.openriskmanagement.com)
 
 # hello_world_rdflib.py
 import rdflib
@@ -16,5 +16,5 @@ g.load('cro.owl')
 # o -> object
 
 for s, p, o in g:
-    print(80*'-')
+    print(80 * '-')
     print(s, p, o)
