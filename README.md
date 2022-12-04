@@ -4,7 +4,7 @@
 
 * This repo collects resources (data and python scripts) used in the [course PYT26060](https://www.openriskacademy.com/course/view.php?id=60)
 * It uses the [CRO Ontology Graph](https://www.openriskmanual.org/ns/cro/index-en.html) as the raw material to illustrate a number of Python tools for working with semantic data
-* Discuss the course on [gitter](https://gitter.im/open-risk/Academy)
+* Discuss the course at the [Open Risk Commons](https://www.openriskcommons.org/t/overview-of-python-semantic-web-tools/62)
 
 ## Scripts
 
