@@ -1,6 +1,7 @@
 # (c) 2021 - 2023 Open Risk (https://www.openriskmanagement.com)
 
 import json
+
 from rdflib import Graph, Namespace
 from rdflib import URIRef, Literal, RDF
 

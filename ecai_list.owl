@@ -9,11 +9,8 @@
          xmlns="https://www.openriskmanual.org/ns/cro/">
 
 <owl:Ontology rdf:about="https://www.openriskmanual.org/ns/cro">
-  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
   <owl:versionIRI rdf:resource="0.1"/>
-  <rdfs:comment>The elements of the CRO ontology are annotated in more detail in the Open Risk Manual under the Credit Ratings Ontology category.</rdfs:comment>
-  <rdfs:seeAlso>https://www.openriskmanual.org/wiki/Credit_Ratings_Ontology</rdfs:seeAlso>
-  <owl:versionInfo>0.1.0</owl:versionInfo>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
   <x_1.1:abstract>The Credit Ratings Ontology (CRO), described using W3C RDF Schema and the Web Ontology Language OWL.
 
 CRO aims to capture the core concepts involved in the production of credit ratings thereby aiding the more systematic processing of credit data.
@@ -33,6 +30,9 @@ Release Notes:
   <x_1.1:title>CRO, A credit ratings ontology</x_1.1:title>
   <term:contributor>We welcome contributors to the Credit Ratings Ontology!</term:contributor>
   <term:license>Creative Commons Attribution 3.0 (CC BY 3.0)</term:license>
+  <rdfs:comment>The elements of the CRO ontology are annotated in more detail in the Open Risk Manual under the Credit Ratings Ontology category.</rdfs:comment>
+  <rdfs:seeAlso>https://www.openriskmanual.org/wiki/Credit_Ratings_Ontology</rdfs:seeAlso>
+  <owl:versionInfo>0.1.0</owl:versionInfo>
 </owl:Ontology>
 
 <owl:ObjectProperty rdf:about="belongs_to_rating_system">
@@ -374,26 +374,27 @@ Release Notes:
   <rdfs:label>CreditRatingModel</rdfs:label>
 </owl:Class>
 
-<CreditRatingAgency rdf:about="AMBGB">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="AMBGB">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A.M. Best (EU) Rating Services B.V.</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A.M. Best (EU) Rating Services B.V. is based in Netherlands and is a wholly owned subsidiary of A.M. Best Rating Services Inc., which is in turn a wholly owned subsidiary of A.M. Best Company Inc. A.M. Best was founded in 1899 and is focused on the issuance of credit ratings to the insurance sector. A.M. Best (EU) Rating Services B.V. undertakes A.M. Best?s credit rating operations in the European, Middle Eastern and African region and also endorses selected ratings issued by Group companies.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best's Credit Rating Methodology (BCRM). Our rating process involves a comprehensive quantitative and qualitative analysis of a company's balance sheet strength, operating performance and business profile, and enterprise risk management. This includes comparisons to peers and industry standards as well as assessments of operating plans, philosophy and management. Where the rating is assigned to a debt security, it also includes a review of the specific nature and details of the security.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www3.ambest.com/ambv/ratingmethodology/</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A.M. Best (EU) Rating Services B.V.</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.ambest.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www3.ambest.com/ambv/ratingmethodology/</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="ERASK">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="ERASK">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACRA Europe</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACRA Europe is part of ACRA Group, which provides high-quality rating and non-rating services through various affiliated entities that operate according to global rating industry best practices. This is ensured by ACRA?s Senior Management, which have extensive professional experience in the industry. ACRA Europe, a subsidiary of ACRA, Russia?s leading CRA, has been operating in the rating market since 2001 and possesses a complete range of licenses required to provide rating services in the EU.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A credit rating assigned by ACRA Europe to the Rated Entity reflects the Agency?s subjective opinion on the entity?s current and future ability to fulfill its outstanding financial obligations (creditworthiness, financial accountability, and financial stability). This is expressed by a relevant rating category within the corresponding rating scale. Creditworthiness (financial accountability, financial stability) shall be interpreted as the Rated Entity?s ability to fulfill its financial obligations. The Rated Entity?s credit rating does not assess credit risk concerning any financial debt instruments issued by the Rated Entity. A credit rating does not serve as a recommendation to purchase, sell, or otherwise dispose of a security. Credit rating users shall perform their own independent assessments of their counterparties? creditworthiness and shall not rely wholly on credit ratings. Credit ratings of financial liabilities or financial liability issue programs: Financial liability shall be interpreted as the Rated Entity?s obligations regarding the financial instruments it issues. A credit rating assigned by ACRA Europe to a financial liability or financial liability issue program reflects the Agency?s subjective opinion on the Rated Entity?s ability to fulfill its outstanding financial obligations on individual financial debt instruments or total financial liabilities. This is expressed by alphanumeric symbols reflecting the relevant rating notch within the corresponding rating scale. The Agency considers the fundamental terms of a financial instrument, including its collateral structure, contractual subordination, and structural subordination, which can affect payments on the given financial liability or instrument if the Rated Entity defaults on this or any other financial liabilities or instruments. Fundamental credit ratings include credit ratings assigned to Rated Entities representing the corporate sector (or their financial liabilities or financial liability issue programs), banking institutions, non-banking financial institutions, insurance companies, sovereigns, as well as regional and municipal governments. Expected credit ratings: In the process of assigning a credit rating to financial instruments, including structured finance instruments and obligations, and when determining the Rated Entity?s ability to fulfill its liabilities on specific financial liabilities or issued debt instruments, ACRA Europe may draw its conclusions based on draft issue documentation. In those instances, the Agency assigns an ?Expected? credit rating, which is one step of the credit rating assignment and is marked with the symbol ?E.? For fundamental credit ratings, the ?Expected? status is assigned for a 90-day period, while for structured finance obligations it is assigned for a 180-day period. Once the final issue documentation is received, ACRA Europe shall assign a credit rating to the financial instrument, which may diverge from the initial ?Expected? rating.  The Standalone Creditworthiness Assessment (SCA) reflects the Agency?s subjective opinion on the Rated Entity?s ability to fulfill its financial liabilities in a full and timely fashion. However, the SCA does not consider the following factors: 1) extraordinary external support from the Supporting Organization/owners; 2) extraordinary external support from the federal government; 3) the Rated Entity?s systemic value; 4) other external factors capable of affecting the Rated Entity?s creditworthiness.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://acra-europe.com/methodology</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACRA Europe</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://acra-europe.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://acra-europe.com/methodology</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="CPRPT">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="CPRPT">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARC Ratings, S.A. (previously Companhia Portuguesa de Rating, S.A)</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARC Ratings, S.A. is an international credit rating agency based in Europe, with a global reach, amalgamating the know-how and background of five experienced partner agencies on four continents:
 ? ARC Ratings, S.A.; 
 ? CARE - India;
@@ -402,13 +403,13 @@ Release Notes:
 ? SR Rating ? Brazil.
 ARC Ratings takes advantage of its local expertise and network-based approach to best serve issuers and investors by assigning stable credit ratings that optimally identify credit risk.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARC Ratings' methodologies are made publicly available in ARC Ratings' website (www.arcratings.com).</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.arcratings.com/uk</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARC Ratings, S.A. (previously Companhia Portuguesa de Rating, S.A)</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.arcratings.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.arcratings.com/uk</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="AARDE">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="AARDE">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASSEKURATA Assekuranz Rating-Agentur GmbH</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASSEKURATA Assekuranz Rating-Agentur GmbH is the first German rating agency that has specialised in the quality assessment of insurance companies from a customer's perspective. To date Assekurata provides solicited corporate ratings for insurance companies in the following classes of insurance: life insurance, private health insurance, casualty insurance/accident and legal expense insurance and statutory health insurances.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assekurata draws up entity ratings and creditworthiness ratings. The entity rating of Assekurata rates German primary insurance companies from the point of view of their essential creditors, the policy holders. The method specified goes beyond the focus of a creditworthiness rating, i.e. the assessment of the solvency. 
 The overall quality of the entity is primarily analysed and rated from the customer's point of view based on differentiated partial qualities. 
@@ -426,40 +427,40 @@ Publication after release: The rating will be published only if the insurer agre
 Documentation: Different forms of presentation, according to the different recipients and media, are issued. The extensive management report is exclusively for the management board of the company concerned. Here all aspects of the rating are explained in detail so that the insurer can follow the decision. The rating report is published on the homepage of Assekurata. 
 It explains the rating for consumers, investors, brokers and the trade press. The press release is a brief summary where the partial results and the final rating are named. The rating logo enables the potential customer to identify the insurer's rating result at first glance.
 Regular update: An Assekurata-rating can be used for one year after completion. During this time Assekurata continuously observes the rating. For further use an update is compulsory.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.assekurata.de/ratings/ratingverfahren/</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASSEKURATA Assekuranz Rating-Agentur GmbH</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.assekurata.de</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.assekurata.de/ratings/ratingverfahren/</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="AXEES">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="AXEES">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AXESOR RISK MANAGEMENT</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Axesor is an independent company that provides ratings for corporations, bonds, project finance, structured finance instruments, financial institutions, and Sovereign and Sub-Sovereign Governments.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Axesor maintains rating methodologies for different rating approaches: corporate ratings, bond ratings, project finance ratings, financial institutions ratings, and sovereign and sub-sovereign ratings.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.axesor-rating.com/en/about-axesor/methodology</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AXESOR RISK MANAGEMENT</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.axesor-rating.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.axesor-rating.com/en/about-axesor/methodology</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="BCRBG">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="BCRBG">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BCRA-Credit Rating Agency AD</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BCRA?CREDIT RATING AGENCY is an entirely private company, established in the year 2002. BCRA?CREDIT RATING AGENCY is specialized in elaboration of ratings for financial institutions (banks, insurance, leasing, pension assurance companies), and bond issues of public and private issuers. Its activity also includes creditworthiness analysis and assignment of credit ratings to countries, municipalities and companies operating in the field of trade, production, services, energy, construction, etc.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BCRA?CREDIT RATING AGENCY?s analytical framework for determining banks? financial strength ratings includes evaluation of the operating environment (overall trends in the banking system, processes underway in the sector, main laws and regulatory requirements related to banking) and of the main factors, under the methodology CRAMELS, that is: capital adequacy, resources, assets quality, management, earnings quality, liquidity, and size and systems. The corporate credit rating implies assessment of the risk from default or inability to pay the liabilities of a given company. This risk has various sources and is examined on several levels: risk, related to the sector (where basic trends in the sector are analyzed, and their impact on the analyzed company, the structure of the sector and its relationships to other sectors and industries), business-risk (operations of the company, product mix, market share, quality of management), and financial risk (analyzed through Profitability, Operating Return, Debt and Liquidity ratios). The rating of insurance companies assigned by BCRA?CREDIT RATING AGENCY is a Rating of the Ability to Pay Claims (RAPC). RAPC is a culmination of an analytical process, which explores the dynamics of the market, the regulatory frame and the main operative and financial indicators of the given insurance company. BCRA?CREDIT RATING AGENCY studies the insurance activity and investments of the company, reinsurance strategy, business advantages as well as ownership, management and strategic focus. In order to determine the credit rating of a leasing company BCRA?CREDIT RATING AGENCY investigates several risks: risk, connected with the sector (including its historical development as well as present state), business risk (operating activity and portfolio of the company, market share and competitive position, as well as the management), and financial risk (analyzed through four main areas: profitability, operating effectiveness, indebtedness, and liquidity). The Credit Rating of a Municipality presents an impartial assessment of its creditworthiness. The rating is based on the analysis of several areas, including legal framework and trends in the development of municipalities, economic factors, profile of debt and future needs for funding, municipal finance (income and spending part, investments in infrastructure) and quality of administrative/management strategies. For better assessment of the municipality and its competitiveness it is positioned against other selected municipalities by main quantitative indicators. The ratings of the pension funds of pension - insurance companies present an appraisal from the viewpoint of the insured persons. The determination of the rating of a pension - insurance company consists of analyses made in the following directions: legal framework of the pension insurance, appraisal of the investment activity, financial analysis (with respect to liquidity, in the first place) and analysis of the quality of management. The credit rating of liabilities of a group of companies reviews several risks: risk, connected with the sector (main trends, legal framework), business risk (competitive position, operating activity, main point is the appraisal of the management) and financial risk (in terms of profitability, operating effectiveness, indebtedness, liquidity). The companies of the group are being assessed with a view of their strategic meaning for the group based on a set of criteria. The ?key? and ?strategically significant? companies in the team of the group are defined. When issuing a sovereign rating, BCRA?CREDIT RATING AGENCY analyses a large number of quantitative and qualitative rating factors organized into four separate categories: 1. Political Risk; 2. Macroeconomic Stability; 3. Fiscal Flexibility; 4. Effectiveness of the Monetary Policy.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.bcra-bg.com/products.php</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BCRA-Credit Rating Agency AD</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.bcra-bg.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.bcra-bg.com/products.php</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="CINCY">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="CINCY">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capital Intelligence Ratings Ltd</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capital Intelligence Ratings (CI Ratings) is an international credit rating agency that provides credit analysis and independent rating opinions on financial institutions, corporates and governments located in Europe, the Middle East, Africa and Asia. CI is headquartered in Cyprus with a branch office in Hong Kong.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CI?s credit ratings are an independent opinion of the creditworthiness of an entity or obligor either in general (an issuer rating) or with regard to a specific financial obligation (an issue rating). The ratings provide a relative ranking of credit risk among rated entities and obligations expressed in rating symbols from ?AAA? to ?D?. CI?s ratings are determined using detailed, sector-specific methodologies and are underpinned by a thorough assessment of the quantitative and qualitative factors that may affect the ability and willingness of an entity or obligor to meet its financial obligations in full and on time. CI?s issuer ratings indicate the likelihood of default, but they do not indicate a specific probability of default over any given time period; nor do they explicitly capture loss severity or recovery prospects. Issue ratings are assigned to specific debt instruments and transactions, and indicate an obligor?s ability and willingness to make full and timely payments of interest and principal in accordance with the terms of the obligation. Issue ratings indicate the likelihood of default and may also reflect the likelihood of full recovery in the event of a default. An issue rating will take into account the terms and provisions of the financial obligation, including the currency of issue and any credit enhancements, as well as its seniority. CI?s foreign and local currency international issuer and issue ratings are comparable across countries. In some markets, CI may also assign issuer and issue ratings on a country-specific national scale (national ratings). Further information on CI?s ratings and methodologies can be found on the company?s website.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.ciratings.com/page/our-policies-procedures/rating-methodologies</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capital Intelligence Ratings Ltd</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.ciratings.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.ciratings.com/page/our-policies-procedures/rating-methodologies</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="CERIT">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="CERIT">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cerved Rating Agency S.p.A.</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cerved Rating Agency provides credit rating services on Italian non-financial corporates and corporate bonds. Cerved Rating Agency credit ratings may be used for regulatory purposes within the European Union.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cerved Rating Agency credit rating is an opinion regarding the creditworthiness of an entity or of a financial obligation. Credit rating analysts use all available information, public and proprietary,
 quantitative and qualitative applying in a rigorous and systematic manner Cerved Rating Agency rating methodologies.
@@ -470,13 +471,13 @@ The key features of Cerved Rating Agency credit rating methodologies are:
 4. The credit rating analyst, responsible for the analysis, submits the credit rating proposal to a Supervisor or the Rating Committee for appraisal;
 5. Cerved Rating Agency credit ratings are continuously monitored and are reviewed at least once a year. The Agency applies the same methodology for the issuance and monitoring for the same type of asset class.
 Cerved Rating Agency performs at least once a year its model validation.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.ratingagency.cerved.com/it/metodologia</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cerved Rating Agency S.p.A.</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.ratingagency.cerved.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.ratingagency.cerved.com/it/metodologia</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="CRRDE">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="CRRDE">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creditreform Rating AG</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creditreform Rating AG, 
 Established: 2000, 
 Located: Germany - Neuss, 
@@ -501,85 +502,85 @@ The team of rating analysts presents the rating relevant factors to the rating c
 The rating is a long term indication of the probability of default. It will be monitored for one year. 
 The rating of a bond sets up on the rating of the company that issues the bond. Collaterals or guarantees or a specific rank of the bond as a debt position might lead to a different bond rating than the company rating.
 The rating of structured financing will take into account the specific waterfall of payments to different classes of investments that are elements of a transaction.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.creditreform-rating.de/wir-ueber-uns/regulatorische-anforderungen.html</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creditreform Rating AG</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.creditreform-rating.de</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.creditreform-rating.de/wir-ueber-uns/regulatorische-anforderungen.html</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="CRFIT">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="CRFIT">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CRIF Ratings S.R.L.</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CRIF Ratings is an independent company which issues ratings for non-financial corporates.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CRIF Ratings� Corporate ratings express an opinion on the creditworthiness of a company or of a company's debt instrument. According to CRIF Ratings� corporate rating methodology, ratings take into account both qualitative and quantitative factors related to the business and financial risks of issuers (�Issuer rating�) and their specific debt instruments (�Issue rating�). An Issuer rating is an opinion on the ability of a subject to honor its financial obligations in full and on time. The assessment focuses on the ability of the debtor to repay its financial obligations irrespective of their ranking. The Issue rating is an opinion on the relative risk of default of a specific debt instrument. The assessment takes into account the level of expected loss on the instrument in the event of default, which will depend on the guarantees supporting the underlying debt obligation and the degree of subordination of the instrument itself in the Issuer�s capital structure. Issuer and Issue rating can be both Short-Term (�ST�) and Long-Term (�LT�).  A single issuer may carry both ST rating and LT rating at the same time whilst a single debt instrument may only carry one type of Issue rating. Issue ST ratings are referred to issues with an original maturity of 12 months or less; Issue LT ratings are referred to issues with an original maturity over 12 months. 
 CRIF Ratings� SME ratings express an opinion on the creditworthiness of a non-financial corporation whose total turnover is comprised between EUR 5m and EUR 75m. According to CRIF Ratings� SME rating methodology, ratings assessment starts from quantitative analysis, based on specific models developed selecting the most predictive financial indicators for the relevant industry. The SME assessment is then adjusted to reflect the company belonging to a group of companies and to incorporate qualitative, judgmental assessments by CRIF Ratings analysts. A SME rating is an opinion, relative to the SME universe, on the ability of a company to honor its financial obligations in full and on time. The assessment focuses on the ability of the debtor to repay its financial obligations irrespective of their ranking. SME Ratings are exclusively Long-Term (�LT�). 
 CRIF Ratings� methodologies have been validated. The initial validation regards the consistency of the methodology employed. The on-going validation is carried out to guarantee consistency and performance of the rating and the quality of the rating assignment process over time.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.crifratings.com/en/methodology/</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CRIF Ratings S.R.L.</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.crifratings.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.crifratings.com/en/methodology/</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="DAGIT">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="DAGIT">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dagong Europe Credit Rating Srl (Dagong Europe)</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dagong Europe is an international credit rating agency that provides credit ratings and non-rating analytical products on financial institutions, including insurance companies, and non-financial corporates.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dagong Europe?s credit ratings are forward looking opinions regarding an entity's ability to meet its financial obligations (bonds, preferred dividends, insurance claims or other debt obligations). These opinions are produced by applying Dagong�s methodology, published on www.dagongeurope.com, and are based on all relevant information available to Dagong from public and non-public sources. Dagong�s ratings are produced in full accordance with the procedures laid out in Credit Rating Procedures document.
   Dagong?s credit ratings rank issuers based on their relative vulnerability to default by analysing their credit risk profile. Dagong?s credit ratings do not reflect a numerical forecasted default rate. Further, they do not include any opinion related to market risk or any risk other than credit risk.
   Dagong Europe uses two scales for its credit ratings:
   * Long-Term Credit Rating Scale: reflects a long-term (exceeding 12 months) assessment of the propensity to default. 
   * Short-Term Credit Rating Scale: reflects the propensity to default in the short term, typically up to 12 months. Under certain circumstances this time limit could be extended due to the characteristics of the debt obligation or regulatory or country-specific factors affecting it.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.dagongeurope.com</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dagong Europe Credit Rating Srl (Dagong Europe)</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.dagongeurope.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.dagongeurope.com</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="DBRGB">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="DBRGB">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBRS Ratings Limited</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBRS is a full-service rating agency that provides credit ratings on issuers of commercial paper, bonds, long/short term debt, and preferred shares, as well as asset-backed securities. DBRS also offers industry analysis, rating reports, and ratings indices for issuers and investors throughout the world.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBRS takes a longer-term through the cycle view of an issuer, and this prevents rating changes that are based solely on normal cycles in the economy. Consequently, DBRS will generally be more responsive to structural changes in the credit fundamentals of a debt issuer, rather than to changes in cyclical economic conditions, unless these conditions are unforeseeably large and persistent</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.dbrs.com/about/methodologies</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBRS Ratings Limited</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.dbrs.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.dbrs.com/about/methodologies</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="EGJUS">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="EGJUS">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egan-Jones Ratings Co. (EJR)</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egan-Jones Ratings started providing ratings in 1995 based in the USA for the purpose of issuing timely, accurate ratings. Egan-Jones is a Nationally Recognized Statistical Ratings Organization and is recognized by the National Association of Insurance Commissioners as a Credit Rating Provider. Egan-Jones is also certified by ESMA.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EJR's credit ratings are based on the likelihood of payment, capacity and willingness of the obligor to meet its financial commitment on an obligation in accordance with the terms of the obligation, the nature of and provisions of the obligation, the protection afforded by and relative position of the obligation in the event of bankruptcy, reorganization or other arrangement under the laws of bankruptcy, and other laws affecting creditors' rights.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.egan-jones.com/methodologies</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egan-Jones Ratings Co. (EJR)</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.egan-jones.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.egan-jones.com/methodologies</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="EHRDE">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="EHRDE">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euler Hermes Rating GmbH</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euler Hermes Rating GmbH is registered as a credit rating agency in accordance with Regulation (EC) No 1060/2009 of the European Parliament and Council (as amended). The Agency is also considered as an external credit assessment institution by the European Banking Authority. As a general rule, an EHR credit rating constitutes an opinion on the creditworthiness and refers solely to the credit risk to the exclusion of all other kinds of risk.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EHR currently performs the following types of credit ratings: issuer ratings (i.e., SME ratings, corporate ratings), issue ratings (e.g., bonds, promissory notes), project ratings (e.g., real estate, wind farms, aviation finance) and structured finance ratings. 
 Issuer ratings: When analysing an issuer, EHR takes a close look at the companys specific business model. It assesses business risk by examining elements such as industry risk, market positioning, competitive positioning, cost efficiency, management, strategy and governance. It is EHRs belief that these qualitative factors cannot be fully captured by data alone or quantified in a standardised process. Financial risk, by contrast, is determined by analysing the companys financial statements. This process analyses and evaluates parameters such as financing structures, financing policies, profitability, cash flow generation and financial flexibility. The essence of any analysis is the assessment of a companys general future ability and willingness to fulfill financial commitments on time. For that reason, plans and planning assumptions are evaluated and analysed particularly carefully when aggregating financial risk and individual business risk. Issue ratings refer to specific financial instruments (bond, Schuldschein loan, etc.). In the rating process, analysts evaluate the probability of default and the loss severity for a specific financial instrument. An issue rating is generally based on the issuers rating. However, it also takes account of features specific to the instrument such as the creditors position in the event of bankruptcy, which in turn depends on contract terms such as subordination, negative pledges or financial covenants. As a result, a corporate bond may have a better or worse rating than the entity that issued it.
 Project ratings: Project ratings primarily assess the amount and stability of future cash flows as well as the creditors position if the project is liquidated. Historical data is often not available. The purpose of a project rating is to evaluate the performance of an investment in a distinct project that generates its own cash flow (e.g., solar farms, aviation finance, real estate, wind farms) based on the project plan and economic viability assessment. The Agency transparently presents material planning assumptions, particularly if they are uncertain, and then identifies and consistently evaluates the extent to which actual results may realistically depart from the planning assumptions. Agency analysts systematically identify technical, economic and legal risks that may arise during construction and operation. Then, they simulate these systematically analysed planning risks (stochastic financial model) in order to determine the frequency of illiquidity and overindebtedness scenarios and thus the likelihood of insolvency. 
 Structured finance ratings: A credit portfolio containing numerous fixed-income financial instruments such as loans and bonds allows risk to be diversified across all the underlying financial securities. As a consequence, a portfolio generally has a lower risk of default than an individual security. A structured finance rating expresses the likelihood that the portfolio principal will be paid back with the agreed interest by the end of the portfolio term. EHR uses analytical and simulation-based models to assess credit portfolios based on their composition, the individual risk of the underlying financial securities and the cash flows for the entire portfolio. This information, along with qualitative characteristics, is used to determine the structured finance rating.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.ehrg.de/en/about-us/our-methods/</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euler Hermes Rating GmbH</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.ehrg.de</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.ehrg.de/en/about-us/our-methods/</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="ERRPL">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="ERRPL">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuroRating Sp. z o.o.</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuroRating is a fully independent credit rating agency, operating since 2007, specialized in the credit risk assessment of corporations and financial institutions.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit ratings assigned by EuroRating are an independent opinions of the creditworthiness of a corporation or financial institution in general (an issuer rating) or with regard to a specific financial obligation (an issue rating). EuroRating uses a single, transparent long-term rating scale (?AAA? to ?D?), which is common to all rating types, although the agency uses different rating methodologies for specific types of the rated entities. The long-term perspective of the credit risk assessment applies to a time horizon of up to the next three years. As the rating methodology used by EuroRating takes into account the susceptibility of the rated entity to changes in currency exchange rates and the overall country risk, the agency does not differentiate the rating scale on local and foreign currency. The ratings issued by EuroRating are therefore comparable to ratings issued by other credit rating agencies in the international scale. The ratings issued by EuroRating reflect a combination of both the likelihood of default and any financial loss suffered by creditors in the event of default. EuroRating?s credit ratings are not a relative ranking of the credit risk of the rated entities, but they are evaluations of the credit risk of individual rated entities in the absolute scale of risk. When assessing the financial credibility of a rated entity EuroRating uses quantitative and qualitative analytical methods. Quantitative assessment includes mainly an analysis of financial statements of the company (preferably for a period of at least the last ten years, taking also into account the most recent quarterly reports and forecasts for the future), conducted using, among others, scoring models for credit risk assessment tailored for specific industries. An important element of quantitative analysis is an assesment of the stability of financial indicators, as well as the dynamics and direction of changes in fundamental values characterizing the condition of the rated company. The methodology attaches great importance to the analysis of cash flows, which are particularly important from the point of view of a solvency of a company. The assessment of the financial situation of a company includes also a comparative analysis, involving the assessment of both the individual parameters as well as the overall risk profile of the company in relation to other entities constituting its reference group. Qualitative analysis includes a wide range variety of factors, which are not easy to quantify and which require in each case an expert evaluation. These include i.a.: the current and forecasted general economic situation; country specific risk factors; the situation in the industry; the company?s market position; dependence on suppliers or customers; quality and market value of company?s assets; vulnerability to changes in exchange rates and/or in commodities prices; business model; quality and innovation of products; experience and qualifications of the management; the accounting principles used; as well as the ownership structure and the likelihood of external support in the event of financial difficulties. A combination of the results of the quantitative and qualitative analysis, requiring in each case an expert judgement of EuroRating?s rating analysts and rating committees, allows to make a final assessment of economic and financial situation of the rated company and of its ability to meet financial obligations in a long term and allows the agency to assign a reliable credit rating.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.eurorating.com/en/ratings/methodology/credit-risk-assessment-methodology</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuroRating Sp. z o.o.</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.eurorating.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.eurorating.com/en/ratings/methodology/credit-risk-assessment-methodology</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="FERDE">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="FERDE">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feri EuroRating Services AG</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FERI EuroRating Services AG is a European rating agency active in the rating business since nearly 20 years, specialized in investment market and product ratings as well as debt issuance credit ratings. Its mission is to improve market transparency and to offer ratings that provide decision-making guidance to retail and institutional investors.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FERI?s ratings are opinions based on established criteria and methodologies which are continuously evaluated and updated. They are the collective work product of FERI and no individual/or group of individuals, is solely responsible for a rating. Ratings are not facts and are not "accurate"/"inaccurate". FERI?s opinions are forward looking and include analysts' views of future performance. FERI?s methodologies are made publicly available and include industry and product specific methodologies in the areas of Sovereigns, Corporate Finance, Structured Finance and Covered Bonds. The FERI Country Credit Rating provides a forward looking assessment of the creditworthiness of a countries? sovereign from the perspective of a foreign creditor. The rating uses model-based forecasts of future economic and structural developments. The forecast is updated and reviewed monthly. Each month the forecast is condensed via a rating system to which the FERI Rating algorithm is applied. The general assessment sequence for the rating algorithm is as follows: indicators are selected and are given certain weights; time periods and time weights are defined and each single indicator is weighted across time. The result is an indicator ranging between 0 and 100 points. This total indicator is split into 21 rating classes, the best being AAA (lowest default risk) to CC (highest default risk) as well as the category D (default). Government bonds of an issuer rated BB+ or below fall into the category ?Non-Investment Grade?. In addition to the quantitative result, the rating analyst provides a qualitative assessment and proposes the preliminary FERI Country Credit Rating to the rating committee. The result of the Country Credit Rating is determined by a sovereign's ability and willingness to repay its debt. The analysis applies four risk indicators separating public finance, domestic economic risks, external economic risks and political risks. The evaluation of credit risks looks at the size of the actual debt as well as at its sustainability, i.e., the nature and scope of financing. While external economic risks are determined mainly by balance and structure of capital and current accounts, the domestic economic risk and the political risk of a country are measured by economic and political stability indicators. Data sources comprise notifications and publications of international organizations (e.g. UNO, IMF, UNIDO, Eurostat), national organizations (e.g. offices for national statistics, national central banks) and other public authorities (e.g. government departments). All other credit ratings for secured debt issuances are based on an Expected Loss approach. This means, that a expected loss calculated under various stress scenarios will be mapped using the weighted average life of the rated instrument to derive the rating on FERI?s 21 notch rating scale from AAA to D. The corporate rating/issuer rating is a PD-rating and based on FERI?s industry rating, the assessment of the opportunities and threats of the relevant market and the corporate individual strength and weakness profile (including the balance sheet/profit and loss statement). In case of an unsecured corporate bond the issuer rating will be used as benchmark for notching up/down based on the issuance characteristics.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://fer.feri.de/de/regulierung/methoden-dokumentationen/</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feri EuroRating Services AG</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://fer.feri.de</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://fer.feri.de/de/regulierung/methoden-dokumentationen/</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="FITGB">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="FITGB">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fitch Ratings Limited</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fitch Ratings is the trade name of the global group of credit rating agencies within the Fitch Ratings group of CRAs. This group encompasses more than 30 separate ratings companies operating across more than 50 offices worldwide.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fitch's ratings are opinions based on established criteria and methodologies which are continuously evaluated and updated. They are the collective work product of Fitch and no individual/or group of individuals, is solely responsible for a rating. Ratings are not facts and are not "accurate"/"inaccurate".
 
@@ -600,31 +601,31 @@ The investigations and scope of the third-party verification will vary depending
 Ultimately, the issuer and its advisers are responsible for the accuracy of the information they provide to Fitch and to the market in offering documents and other reports. Fitch must rely on the work of experts, including independent auditors with respect to financial statements and attorneys with respect to legal and tax matters. Further, ratings are inherently forward-looking and embody assumptions and predictions about future events that by their nature cannot be verified as facts. As a result, despite any verification of current facts, ratings can be affected by future events or conditions that were not anticipated at the time a rating was issued or affirmed. If any such information should turn out to contain misrepresentations or to be otherwise misleading, the rating associated with that information may not be appropriate.
 
 In the default components of ratings assigned to individual obligations or instruments, the agency typically rates to the likelihood of non-payment or default in accordance with the terms of that instrument?s documentation. In limited cases, Fitch Ratings may include additional considerations (i.e. rate to a higher or lower standard than that implied in the obligation?s documentation) and will make clear the assumptions underlying the agency?s opinion in the rating commentary.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.fitchratings.com/site/fitch-home/definitions</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fitch Ratings Limited</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.fitchratings.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.fitchratings.com/site/fitch-home/definitions</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="GBBDE">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="GBBDE">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBB-Rating Gesellschaft f�r Bonit�tsbeurteilung mbH</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBB-Rating Gesellschaft f�r Bonit�tsbeurteilung mbH, Cologne, Germany is an independent rating agency focused on financial institutions and medium-sized businesses of other industries. Due to a longtime rating experience and detailed knowledge of the individual industry framework and risk systems GBB-Rating offers special fitted rating procedures.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The (long-term credit) rating of banks, building societies, lease financial institutions and small and medium sized companies is based on an analysis and evaluation of material quantitative and qualitative aspects of the financial and business profiles, performed using a system of indicators and criteria. The rating result is assigned to one of 22 grades (AAA to D) and supplemented by a rating outlook. The focal point of the rating procedure is the calculation of an overall score or combined result (point scores), which serves as a creditworthiness indicator and determines the assigned grade. The combined result is calculated on the basis of weighted points from the aggregated parameters financial profile and business profile. In principle, the procedure is designed for the purpose of assessing legally independent corporations that are active in the markets ? operating as going concerns. The indicators and criteria are analyzed, assessed and evaluated on the basis of the financial and business profiles in compliance with established internal rules and procedures. The financial profile is evaluated by analyzing financial strength, as expressed by long-term earning capacity and the capital available to cover risks. Indicators and qualitative criteria are applied to assess the relevant financial position and financial performance, and developments and changes are analyzed from a past, current and future perspective. Key sources of information are, in particular, annual and quarterly reports, planning information and if necessary additional disclosures. Examining the business profile focuses on analyzing relevant success and risk factors, while giving consideration to the corporation's development (from a past, current and future perspective). The assessment analyzes chiefly qualitative and forward-looking external and internal influencing factors. Criteria concerning e. g. the issues of strategy, the market, organization, risk management, risk profile and capitalization potential are evaluated. Supporting indicators are used to perform plausibility checks on the analyses and evaluations. Alongside relevant particularities, especially those relating to the company and business model, the success and risk factors governing various corporation types, are analyzed and consolidated to obtain a forward-looking and verifiable overall judgment. The business profile is assessed according to the relevant rating methodology (banks, building societies, lease financial institutions and small and medium sized companies) by making a distinction between different main criteria. Each of these main criteria is divided into sub-criteria. The criteria are measured against fixed assessment scales. Once a lead analyst and a second analyst have examined, assessed and verified all the criteria, the weighted scores are applied to obtain an overall business profile score for use in decision-making. A detailed manual contains descriptions, methods and outline requirements concerning the evaluation procedure for all criteria.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.gbb-rating.eu/en/presse/eu-veroeffentlichungen/Pages/default.aspx</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBB-Rating Gesellschaft f�r Bonit�tsbeurteilung mbH</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.gbb-rating.eu</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.gbb-rating.eu/en/presse/eu-veroeffentlichungen/Pages/default.aspx</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="HRRMX">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="HRRMX">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HR Ratings de M�xico, S.A. de C.V. (HR Ratings)</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HR Ratings issues credit ratings for entities that operate in the sovereign and public finance, structured finance and corporate (including financial institutions, insurance undertaking and corporate issuers not considered a financial institution) sectors. The analysis that HR Ratings performs is built on a strong understanding of the macroeconomic environment in which the entity operates, as well as specific factor that affect the entities that are analyzed.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Our credit ratings need to be understood as rankings of the relative creditworthiness of different entities or credits. Creditworthiness takes into consideration both the ability and willingness to meet debt obligations in the manner prescribed in the relevant documentation. As our ratings measure relative creditworthiness they do not necessarily reflect any specific statistical probability of default. In order to make more valid rankings of creditworthiness, our different methodologies apply stress case scenarios to complement our base case analysis.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.hrratings.com/en/methodology</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HR Ratings de M�xico, S.A. de C.V. (HR Ratings)</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.hrratings.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.hrratings.com/en/methodology</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="ICAGR">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="ICAGR">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICAP Group SA</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Under the present legal form (ICAP S.A.) the company was established on 01-11-2018 following the Break Up of ICAP GROUP S.A. It is legally treated as the Final Successor of ICAP GROUP S.A. 
 ICAP GROUP S.A. was founded in 1971 in Greece. It evolved following the conversion to SA of ICAP HELLAS LLC, which was founded in 1964. ICAP is actively involved since 1992 in Credit Risk measurement and management and Credit Rating evaluation of Greek companies, based on the data derived from ICAP DATABANK.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICAP assigns Credit Ratings to Greek corporates that are not considered to be a financial institution or insurance and do not present any case of conflict of interest.
@@ -657,22 +658,22 @@ The performance of the Credit Ratings is monitored by executing validation tests
 
 ICAP assigns rating for a corporate debt instrument issue by applying expected recovery-driven notching on the long-term rating of the corporate issuer. The maintained assumption of this rating approach is that, on average, the rating of a senior unsecured debt instrument coincides with the rating of the issuer, which in turn reflects that on average the estimated overall recovery rate of the corporate in the event of default is in parity with the benchmark recovery rate of its respective sector. Possible deviations from such recovery rate parity would trigger notching upgrade in the event of higher expected recoveries than the benchmark or notching downgrade otherwise. Complementary assessments include the effects of country and counterparty risks as well as qualitative factors such as legal and audit opinions.
 Given that the likelihood of default is captured in ICAP corporate ratings and that expected recoveries are estimated from both the assets of the corporation and potentially from structural enhancements, the resulting debt instrument rating reflects an expected loss in the event of default in the long-term aligned with the corporate rating horizon, which in turn assesses the likely ability to meet the ultimate obligations of the issue.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.icap.gr/en/our-services/ratings-analytics-services/ratings-scores/</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICAP Group SA</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.icap.gr</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.icap.gr/en/our-services/ratings-analytics-services/ratings-scores/</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="INBES">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="INBES">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inbonis S.A</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INBONIS SA is a credit rating agency providing corporate ratings on corporate issuers not considered a financial institution or insurance undertaking specialised on small and medium enterprises (SMEs)</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inbonis assesses four main types of risks (Business risks, financials risks, corporate and governance risks and economic environment risk) throughout two modules: A micro-economic model and a qualitative assessment conduted by rating analysts. The methodology, specifically designed for SMEs, also includes adjustment according to macro-economic model and rating sensitivity assessment</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://inbonis.com/wp-content/uploads/INBONIS-Disclosure_6-Methodology__Definition.pdf</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inbonis S.A</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://inbonis.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://inbonis.com/wp-content/uploads/INBONIS-Disclosure_6-Methodology__Definition.pdf</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="INCPL">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="INCPL">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INC Rating Sp. z o.o.</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INC Rating Sp. z o.o. is a subsidiary of INC SA. INC Rating rating functions as a CRA in the area of Poland and European Union. The agency is supervised by the European Securities and Markets Authority (ESMA). INC Rating dedicates its services to public sector entities, especially local government units.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit rating methodology used by INC Rating can be divided into five areas, or five perspectives, from which the Agency?s analysts assess a potential rating for a given entity. 
 
@@ -687,76 +688,76 @@ These areas are:
 4) To maintain impartiality of the opinion INC Rating uses also quantitative indicators to determine the quality of the local government?s management. Indicators used by the Agency in this analysis are e.g. (current income/planned current income, current expenditure/planned current expenditure, capital expenditure/planned capital expenditure, administration costs/current expenditure);
 
 5) Financial analysis of the local government is the most important part in the rating process. It is an outcome of local government?s macro and micro economical potential along with administrative decisions (the management). Therefore the outcome of the rating process is largely determined by the outcome of the local government budget?s financial analysis. Analysts compare almost 100 different indicators divided into 5 groups: budget, debt, income, expenditure and capital expenditure. (e.g. Net operating surplus/Net current income, Operating surplus/Current income, Surplus (deficit) before debt/Total income, Budget balance/Total income, Operating funds/Total income).</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.incrating.pl/spolka/dokumenty-korporacyjne</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INC Rating Sp. z o.o.</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.incrating.pl</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.incrating.pl/spolka/dokumenty-korporacyjne</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="JCRFR">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="JCRFR">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan Credit Rating Agency Ltd</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JCR, established in 1985, provides mainly credit ratings and information services. As a CRA, it is registered in Japan and the U.S. and certified in the EU. Our credit ratings mainly cover corporations, financial/insurance institutions, governments, public sector, and structured finance products. Meanwhile, as for the action validity time, we fixed at 15:30 (JST) because we in principle publish news release at the indicated time.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A credit rating is an assessment of one's ability to meet debt obligations, and pay principal and interest in accordance with financial agreements. Each individual obligation has its own contract, so the likelihood of the recovery of debts, should the issuer go bankrupt, varies according to each contract. A credit rating is therefore required to determine the likelihood that the obligor will go bankrupt and default on its obligation and the likelihood of recovery of the obligation should the obligor go bankrupt. Among other things, JCR focus on an obligor's creditworthiness as a going concern. The likelihood of the principal and interest being paid on time as specified in the contract is largely dependent on the obligor remaining financially stable and able to generate the necessary cash flow continuously as a going concern. At JCR, a credit rating assessing the capacity of the obligor to honor its financial commitment on the obligation is called "Long-Term Issuer Rating". In determining a Long-Term Issuer Rating, specific contractual details, preferred status among obligations, and the degree of recoverability are not taken into consideration, because the purpose of this rating is to get a comprehensive grasp of all of the obligor's obligations. Those individual factors are reflected in the assessment of individual obligations. Payments of obligations are taken from the cash flow generated from the obligor's daily operating activities. When assessing creditworthiness, it is therefore important to determine whether the profitability and stability of this cash flow matches that of the obligations to be repaid. It is extremely important to analyze the relative relationships between cash flow and obligations. When assessing creditworthiness, focus is placed on two main issues, the business and the financial foundations. In addition, JCR may take into consideration for the credit supports from the external sources, such as parent companies, Deposit Insurance System, etc. In the rating process, while the quantitative and qualitative analysis of industries and individual obligors is the core of the research, other results, such as JCR's original Individual Corporate Default Rate Estimation model, are used as reference data in the process of assessing creditworthiness as a means to enhance the objectivity of the rating. As mentioned above, the core foundation for a rating is the obligor's creditworthiness. The JCR rating codes indicate the degree of likelihood of this kind of default occurring. For the creditor, the likelihood of recovery under the bankruptcy is also a matter of significant interest. When there is a discrepancy in the likelihood of recovery among individual obligations, to the point of soliciting caution among the investors, there may be cases where the JCR assigns a notch differential from the Long-Term Issuer Rating. In assessing the likelihood of recovery, JCR takes three factors into consideration: (a) the level of creditworthiness of the obligor; (b) the financial structure of the obligor; and (c) the relative contractual position of the obligation being rated. For these factors, a notch differentiation by a mechanical application is not used. Instead, various factors are considered to comprehensively reach a determination. As JCR assesses an obligor's ability to perform its obligations over time, estimating the ability to generate income and predicting future financial conditions are important. Based on the current financial statements and management plans together with the perspective of industry trends and business foundations, JCR estimates future balance sheets, profits and losses and the future trend of operational indicators. In such cases, JCR also analyzes the obligation's sensitivity to changes in economic conditions and considers all "worse case scenarios."</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.jcr.co.jp/en/rrinfo/</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan Credit Rating Agency Ltd</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.jcr.co.jp</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.jcr.co.jp/en/rrinfo/</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="KBRUS">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="KBRUS">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kroll Bond Rating Agency</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kroll Bond Rating Agency (KBRA) was established in 2010 by Jules Kroll to restore trust in credit ratings by creating new standards for assessing risk and by offering accurate, clear and transparent ratings. KBRA is registered with the U.S. Securities and Exchange Commission as a Nationally Recognized Statistical Rating Organization (NRSRO). In addition, KBRA is recognized by the National Association of Insurance Commissioners (NAIC) as a Credit Rating Provider (CRP).</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KBRA issues ratings based on published methdologies all of which are avilable on KBRA's website.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.krollbondratings.com/ratings/methodologies/</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kroll Bond Rating Agency</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.krollbondratings.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.krollbondratings.com/ratings/methodologies/</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="MOFIT">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="MOFIT">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modeFinance S.r.l.</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modeFinance, as a registered Credit Rating Agency in accordance with EU Reg. 1060/2009, issues unsolicited credit ratings to financial and non-financial companies under the subscriber-pays model.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modeFinance independently develops procedures, criteria and models that constitute the foundations of its credit rating activity. Corporate ratings issued by modeFinance are the result of two methodologies: the first, purely quantitative, is MORE (or MORE for BANKS) Methodology, widely tested on millions of companies worldwide during a continuous scoring activity; the second methodology, RATING (or RATING for BANKS) Methodology, implies the intervention of modeFinance team of rating analysts, who are responsible for the activity of issuance, monitoring and publication of credit ratings.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://cra.modefinance.com/en/methodologies</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modeFinance S.r.l.</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.modefinance.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://cra.modefinance.com/en/methodologies</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="MDYGB">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="MDYGB">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moody's Investors Service Ltd</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moody's is a leading provider of credit ratings, research &amp; risk analysis. Moody?s submits certain data to ESMA, but bears no responsibility or liability for the timeliness or accuracy of its display on the European Rating Platform. Consult www.Moodys.com for current information &amp; terms of use. (c)2021 Moody?s &amp; affiliates. All rights reserved. Moody?s ratings are proprietary &amp; protected by copyright laws. DATA MUST NOT BE COPIED, DISSEMINATED, MODIFIED, OR STORED, WITHOUT MOODY?S CONSENT.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Please note, as of 17 August 2018, the responsible CRA for all ratings endorsed into the EU is Moody?s Deutschland GmbH. Moody's maintains rating methodologies for different rating categories. Moody's long-term ratings are opinions of the relative credit risk of financial obligations with an original maturity of one year or more. They address the possibility that a financial obligation will not be honored as promised. Such ratings use Moody's Global Scale and reflect both the likelihood of default and any financial loss suffered in the event of default. Long-Term Issuer Ratings are opinions of the ability of entities to honor long-term senior unsecured financial obligations and contracts. Moody's expresses Long-Term Issuer Ratings on one long-term Global Scale, which is common to all rating types. Moody's short-term ratings are opinions of the ability of issuers to honor short-term financial obligations. Short-term ratings may be assigned to issuers, short-term programs or to individual short-term debt instruments of any rating type. Such obligations generally have an original maturity not exceeding thirteen months, unless explicitly noted. The credit rating data submitted to the central repository is provided for Corporate, Financial Institutions and Sovereign and Public Finance ratings on an issuer level and not on a group basis. Structured Finance ratings and Covered Bond ratings are submitted to the central repository on an instrument basis. US municipal ratings are only provided since June 2010, when they were recalibrated on Moody's global long term rating scale. For ratings that were withdrawn prior to August 2010, the collateral type of the transaction was used to determine whether the rating related to a structured finance instrument. For long-term structured finance ratings, impairments (see below) and not defaults are reported and those that were issued prior to 1993 are excluded. Geographically Moody's classifies offshore entities into their legal domicile irrespective of the domicile of their parent company, if any. For example an offshore subsidy of a US based company legally domiciled in Cayman Islands is given the Cayman Islands ISO code.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.moodys.com/researchandratings/methodology/003006001/rating-methodologies/methodology/003006001/4294966628/4294966848/</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moody's Investors Service Ltd</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.moodys.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.moodys.com/researchandratings/methodology/003006001/rating-methodologies/methodology/003006001/4294966628/4294966848/</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="NCRNO">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="NCRNO">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nordic Credit Rating AS</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nordic Credit Rating is a credit rating agency headquartered in Oslo with a branch in Stockholm. We provide credit ratings to issuers of bonds in the Nordic region based on independent and objective analysis with local insights. Ratings will only be submitted to RADAR from the Norweigan entity.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We assign long- and short-term ratings on corporates and financial institutions. Ratings are assigned to issuers and issues. The rating scale is the same for both type of issuers.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://nordiccreditrating.com/governance/methodologies</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nordic Credit Rating AS</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://nordiccreditrating.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://nordiccreditrating.com/governance/methodologies</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="EXRDE">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="EXRDE">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rating-Agentur Expert RA GmbH</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rating-Agentur Expert RA GmbH is a business unit of International group �RAEX� in the European Union. The agency is operating since 2013 and its office is located in Frankfurt am Main.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Agency has established methodologies for different types of ratings: sovereign, regions, banks, corporates and insurance companies.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://raexpert.eu</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rating-Agentur Expert RA GmbH</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.raexpert.eu</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://raexpert.eu</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="PSRDE">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="PSRDE">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope Ratings AG</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope Ratings GmbH ("Scope") started its business activities in 2002 with the headquarter based in Berlin. Scope has been registered by ESMA as a credit rating agency that issues and endorses credit ratings for the following rating divisions: Corporates, Financial Institutions, Sovereigns, Public Sector, Structured Finance including covered bonds, and Project Finance. Scope offers credit rating services, ancillary and other services as described in its service list published on its website.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit rating methodologies are analytical frameworks used by Scope Ratings to assign and monitor ratings. They describe the key rating factors that Scope Ratings believes are most relevant in assessing the credit risk of issuers or of debt instruments in a sector (banks, corporates, structured finance, etc.). Scope Ratings? methodological approaches to determining credit ratings include an evaluation of both qualitative and quantitative rating factors. Quantitative factors are addressed through a quantitative analysis applied with the use of models.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.scoperatings.com/#!methodology/list</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope Ratings AG</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.scoperatings.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.scoperatings.com/#!methodology/list</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="SRRFR">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="SRRFR">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spread Research SAS</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Founded in 2004, Spread Research is a leading European Independent credit Research Providers (IRP). Our experienced team is dedicated to providing value-added analysis on the credit worthiness of high-yield convertible corporate bond issuers. Most of the company's clients are based in London: Asset managers, Credit funds, Prop desks and Banks. Our coverage include European High Yield, European Convertible and Emerging Market Corp</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Long term Spread research rating is Spread Research s measure of the future credit quality of an issuer within a 6- to 12- month horizon, expressed as a Probability of Default. 
 The Loss Given Default is captured separately by the recovery rate. Ratings assigned by Spread Research are based on the analysis of a mix of qualitative factors
@@ -766,32 +767,31 @@ risk profile and of its financial risk profile. Certain specific credit consider
 Spread Research short term ratings are a measure of an issuer s ability to fulfill its debt-related payments within a 12-15 month timeframe.
 Spread Research short term ratings are used to assess the risk of short term instruments that are mostly unsecured and have a maturity less than 15
 months. Such instruments include commercial paper, short term notes and long term notes close to maturity.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.spreadresearch.com/our-methodology</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spread Research SAS</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.spreadresearch.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.spreadresearch.com/our-methodology</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="STPGB">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="STPGB">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard &amp; Poor's Credit Market Services Europe Limited</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S&amp;P Global Ratings, a leading international credit rating agency, has been assigning credit ratings since 1916. The credit rating activities of S&amp;P Global Ratings are conducted globally through various affiliated entities which are all direct or indirect subsidiaries, branches or divisions of S&amp;P Global Inc. and that, within a globally integrated operating structure, operate in accordance with policies and procedures and criteria that are generally globally applicable.</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S&amp;P Global Ratings uses the term ''criteria'' generically to refer to the whole body of written guidance for our assignment of credit ratings. Such guidance includes a discussion of quantitative and qualitative elements, analytical methodologies, and assumptions that we use in the ratings process to produce our rating opinions. Our criteria may be global, regional, or local in scope, or apply to one or more industries, asset classes, or other subject areas. We refer to this body of guidance as ''criteria.''  Our rating committees assign ratings based on the application of criteria to the circumstances of an individual issuer or issue. Criteria provide general guidelines and tools to analyze risks that are common to a sector, region, asset class, or other subject area. We group our criteria into three broad subsets: principles, methodology, and assumptions. ''Principles'' refers to our fundamental approach to analyzing credit risk. ''Methodology'' refers to the step-by-step approach we take to applying criteria principles to rating a particular sector or asset class, such as corporates, public finance, or asset-backed securities. ''Assumptions'' refers to the key projections, estimates, input parameters, and other types of qualitative or quantitative assumptions that our analysts use to analyze creditworthiness.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.standardandpoors.com/en_EU/web/guest/ratings/ratings-criteria</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard &amp; Poor's Credit Market Services Europe Limited</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.standardandpoors.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://www.standardandpoors.com/en_EU/web/guest/ratings/ratings-criteria</has_methodology_url>
+</owl:NamedIndividual>
 
-<CreditRatingAgency rdf:about="EIUGB">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+<owl:NamedIndividual rdf:about="EIUGB">
+  <rdf:type rdf:resource="CreditRatingAgency"/>
+  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Economist Intelligence Unit Ltd</has_name>
   <has_agency_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Economist Intelligence Unit</has_agency_description>
   <has_methodology_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The model comprises 61 indicators and is divided into five sections: politics/institutions; economic policy; economic structure; the economic cycle; and financing and liquidity. The number of indicators in each section varies but is at least ten.
 
 The model contains two types of indicator: qualitative and quantitative. Of the 61 indicators in the model, 30 are quantitative and 31 are qualitative. For each indicator there is a menu of five possible scores, ranging from 0 (least risky) to 4 (most risky).
 
 Qualitative indicators are scored in accordance with the judgment of the country analyst. Quantitative indicators are scored on the basis of regularly updated macroeconomic and financial data.</has_methodology_description>
-  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://graphics.eiu.com/upload/CRS_Handbook_January_2014.pdf</has_methodology_url>
-  <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Economist Intelligence Unit Ltd</has_name>
   <has_webpage rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">https://www.eiu.com</has_webpage>
-</CreditRatingAgency>
+  <has_methodology_url rdf:datatype="https://www.w3.org/2001/xmlschema#anyURI">http://graphics.eiu.com/upload/CRS_Handbook_January_2014.pdf</has_methodology_url>
+</owl:NamedIndividual>
 
 
 </rdf:RDF>

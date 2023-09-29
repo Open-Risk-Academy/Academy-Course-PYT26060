@@ -3,7 +3,7 @@
 # filter_rdf_file.py
 import rdflib
 
-# Create an new RDF graph
+# Create a new RDF graph
 g = rdflib.Graph()
 # Load a graph from a local directory
 g.load('cro.owl')

@@ -1,7 +1,9 @@
 # (c) 2021 - 2023 Open Risk (https://www.openriskmanagement.com)
 
 import json
+
 import owlready2 as owl
+
 from custom_datatypes import *
 
 # Load our ontology and any custom datatypes

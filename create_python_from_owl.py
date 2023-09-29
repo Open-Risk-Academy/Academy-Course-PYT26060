@@ -1,8 +1,9 @@
 # (c) 2021 - 2023 Open Risk (https://www.openriskmanagement.com)
 
-import owlready2 as owl
 import inspect
 import pprint as pp
+
+import owlready2 as owl
 
 # onto = owl.get_ontology('cro.owl').load()
 # Alternatively load graph data from a URL
